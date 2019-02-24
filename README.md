@@ -175,7 +175,7 @@ Return a view to be displayed at the specified index in the KolodaView.
 ```swift
 func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView?
 ```
-Return a view for card overlay at the specified index. For setting custom overlay action on swiping(left/right), you should override didSet of overlayState property in OverlayView. (See Example)
+Return a view for card overlay at the specified index. To customize the overlay appearance depending on the direction of the swipe, set the appropriate appearance when the overlayState property is set. (See Example)
 ```swift
 func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed
 ```
