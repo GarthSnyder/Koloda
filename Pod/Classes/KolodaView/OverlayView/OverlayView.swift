@@ -8,12 +8,20 @@
 
 import UIKit
 
-open class OverlayView: UIView {
+public typealias OverlayView = OverlayProtocol & UIView
+
+public protocol OverlayProtocol {
     
-    open var overlayState: SwipeResultDirection?
+    var overlayState: SwipeResultDirection? { get set }
     
-    open func update(progress: CGFloat) {
+    func update(progress: CGFloat)
+
+}
+
+public extension OverlayProtocol where Self: UIView {
+
+    func update(progress: CGFloat) {
         alpha = progress
     }
-
+    
 }
